@@ -1,3 +1,4 @@
+// get file input as constant, set file to none and add event listener
 const file = document.querySelector("#file-upload");
 file.value = "";
 file.addEventListener("change", (event) => {
@@ -9,6 +10,7 @@ file.addEventListener("change", (event) => {
     }
 });
 
+// get the file and convert it to a json object then update table
 const fileToJson = () => {
     const reader = new FileReader();
     reader.onload = function (event) {
@@ -19,10 +21,13 @@ const fileToJson = () => {
     reader.readAsText(file.files[0]);
 };
 
+// convert time to minutes and seconds (to 3dp)
 const msToMins = (timeInMs) => {
     const timeInS = timeInMs / 1000;
     const minutes = Math.floor(timeInS / 60);
-    const seconds = (timeInS % 60).toFixed(3);
+    let seconds = (timeInS % 60).toFixed(3);
+    // pad seconds so that a single digit integer part e.g. 9.110 becomes 2 digit integer part e.g. 09.110
+    seconds = seconds.toString().padStart(6, "0");
     return minutes + ":" + seconds;
 };
 
@@ -69,7 +74,15 @@ const updateTable = (json) => {
             row += "best ";
         }
         row += "'><td>" + (i + 1) + "</td>";
-        console.log(row);
+        let totalTime = 0;
+        for (let j = 0; j <= sectors; j++) {
+            totalTime += lap.sectors[j];
+        }
+        row += "<td>" + msToMins(totalTime) + "</td>";
+        for (let j = 0; j <= sectors; j++) {
+            row += "<td>" + msToMins(lap.sectors[j]) + "</td>";
+        }
+        row += "<td>" + lap.cuts + "</td>";
         table.innerHTML += row;
     }
 };
