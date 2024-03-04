@@ -23,7 +23,7 @@ const msToMins = (timeInMs) => {
     const timeInS = timeInMs / 1000;
     const minutes = Math.floor(timeInS / 60);
     const seconds = (timeInS % 60).toFixed(3);
-    console.log(minutes + ":" + seconds);
+    return minutes + ":" + seconds;
 };
 
 const updateTable = (json) => {
