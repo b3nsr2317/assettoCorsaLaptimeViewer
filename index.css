@@ -13,5 +13,20 @@ h1 {
 
 .form-control {
     background-color: #888;
-    border-color: #222;
+    border-color: #444;
+    margin-bottom: 20px;
+}
+
+.form-control[type="file"]::file-selector-button {
+    background-color: #444;
+    color: #eee;
+}
+
+.form-control[type="file"]:hover::file-selector-button {
+    color: #333;
+}
+
+#laptime-table {
+    margin-left: 1vw;
+    width: 98vw;
 }
