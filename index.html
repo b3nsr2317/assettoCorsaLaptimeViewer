@@ -16,7 +16,19 @@
     </head>
     <body>
         <div id="main-container" class="container-fluid">
-            <h1 class="row">Assetto Corsa Session Details</h1>
+            <div id="header" class="row">
+                <h1 class="col">Assetto Corsa Session Details</h1>
+            </div>
+            <div id="input-form" class="row">
+                <form>
+                    <p>
+                        Upload session file - found in "/AppData/Local/AcTools
+                        Content Manager/Progress/Sessions/&lt;filename&gt;.json"
+                        by default
+                    </p>
+                    <input class="form-control" type="file" id="file-upload" />
+                </form>
+            </div>
         </div>
         <script src="index.js"></script>
         <script src="bootstrap-5.3.3-dist/js/bootstrap.bundle.min.js"></script>
