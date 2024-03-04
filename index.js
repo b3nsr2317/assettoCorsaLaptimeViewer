@@ -19,6 +19,13 @@ const fileToJson = () => {
     reader.readAsText(file.files[0]);
 };
 
+const msToMins = (timeInMs) => {
+    const timeInS = timeInMs / 1000;
+    const minutes = Math.floor(timeInS / 60);
+    const seconds = (timeInS % 60).toFixed(3);
+    console.log(minutes + ":" + seconds);
+};
+
 const updateTable = (json) => {
     // get and clear table
     const table = document.querySelector("#laptime-table");
@@ -51,4 +58,9 @@ const updateTable = (json) => {
     }
     titleRow += "<th>Cuts</th></tr>";
     table.innerHTML += titleRow;
+    for (let i = 0; i < laps.length; i++) {
+        lap = laps[i];
+        let row = "<tr><td>" + (i + 1) + "</td>";
+        table.innerHTML += row;
+    }
 };
