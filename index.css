@@ -1,0 +1,15 @@
+body {
+    background-color: #555;
+}
+
+h1 {
+    color: #bbb;
+    text-decoration: underline;
+    text-decoration-color: #a00;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 5px;
+}
+
+#main-container {
+    padding: 0px 10px;
+}
