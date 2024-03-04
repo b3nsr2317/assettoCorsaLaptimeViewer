@@ -11,6 +11,14 @@ h1 {
     text-underline-offset: 5px;
 }
 
+h5 {
+    color: #bbb;
+    text-decoration: underline;
+    text-decoration-color: #a00;
+    text-decoration-thickness: 2px;
+    text-underline-offset: 3px;
+}
+
 .form-control {
     background-color: #888;
     border-color: #444;
