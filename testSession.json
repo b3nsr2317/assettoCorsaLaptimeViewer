@@ -1,0 +1,204 @@
+{
+    "track": "knr_silverstone_2005-national",
+    "number_of_sessions": 1,
+    "players": [
+        {
+            "name": "b3nsr2317",
+            "car": "mazda_mx5_nb_stock_1.8l",
+            "skin": "03_grace green mica"
+        }
+    ],
+    "sessions": [
+        {
+            "event": 0,
+            "name": "Hotlap",
+            "type": 4,
+            "lapsCount": 0,
+            "duration": 30,
+            "laps": [
+                {
+                    "lap": 0,
+                    "car": 0,
+                    "sectors": [26959, 42561, 37413],
+                    "time": -1,
+                    "cuts": 1,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 1,
+                    "car": 0,
+                    "sectors": [23685, 29974, 38209],
+                    "time": -1,
+                    "cuts": 3,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 2,
+                    "car": 0,
+                    "sectors": [24856, 29066, 28700],
+                    "time": 82622,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 3,
+                    "car": 0,
+                    "sectors": [24852, 28052, 29871],
+                    "time": 82775,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 4,
+                    "car": 0,
+                    "sectors": [24626, 28368, 29016],
+                    "time": 82010,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 5,
+                    "car": 0,
+                    "sectors": [23727, 27607, 29344],
+                    "time": 80678,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 6,
+                    "car": 0,
+                    "sectors": [23857, 27824, 29114],
+                    "time": 80795,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 7,
+                    "car": 0,
+                    "sectors": [23587, 27369, 29084],
+                    "time": 80040,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 8,
+                    "car": 0,
+                    "sectors": [23656, 28093, 28962],
+                    "time": 80711,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 9,
+                    "car": 0,
+                    "sectors": [23074, 27463, 28359],
+                    "time": 78896,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 10,
+                    "car": 0,
+                    "sectors": [23609, 27680, 28723],
+                    "time": 80012,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 11,
+                    "car": 0,
+                    "sectors": [23006, 27100, 28894],
+                    "time": 79000,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 12,
+                    "car": 0,
+                    "sectors": [22874, 27189, 28620],
+                    "time": 78683,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 13,
+                    "car": 0,
+                    "sectors": [23285, 27545, 28399],
+                    "time": 79229,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 14,
+                    "car": 0,
+                    "sectors": [23439, 27193, 28881],
+                    "time": 79513,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 15,
+                    "car": 0,
+                    "sectors": [23433, 27296, 28413],
+                    "time": 79142,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 16,
+                    "car": 0,
+                    "sectors": [23025, 26824, 28611],
+                    "time": 78460,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 17,
+                    "car": 0,
+                    "sectors": [23360, 27180, 28328],
+                    "time": 78868,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 18,
+                    "car": 0,
+                    "sectors": [23019, 26617, 28354],
+                    "time": 77990,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 19,
+                    "car": 0,
+                    "sectors": [22746, 26320, 29272],
+                    "time": 78338,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 20,
+                    "car": 0,
+                    "sectors": [22898, 26767, 29079],
+                    "time": 78744,
+                    "cuts": 0,
+                    "tyre": "ST"
+                },
+                {
+                    "lap": 21,
+                    "car": 0,
+                    "sectors": [22670, 28215, 28508],
+                    "time": 79393,
+                    "cuts": 0,
+                    "tyre": "ST"
+                }
+            ],
+            "lapstotal": [22],
+            "bestLaps": [{ "car": 0, "time": 77990, "lap": 18 }]
+        }
+    ],
+    "extras": [
+        { "name": "special_event", "guid": "", "max": 0, "tier": -1 },
+        { "name": "bestlap", "time": 77990 }
+    ]
+}
