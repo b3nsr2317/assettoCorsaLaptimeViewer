@@ -59,8 +59,17 @@ const updateTable = (json) => {
     titleRow += "<th>Cuts</th></tr>";
     table.innerHTML += titleRow;
     for (let i = 0; i < laps.length; i++) {
-        lap = laps[i];
-        let row = "<tr><td>" + (i + 1) + "</td>";
+        const lap = laps[i];
+        let row = "<tr class='";
+        // check for invalid lap and best lap
+        if (lap.time < 0) {
+            row += "invalid ";
+        }
+        if (i == bestLap) {
+            row += "best ";
+        }
+        row += "'><td>" + (i + 1) + "</td>";
+        console.log(row);
         table.innerHTML += row;
     }
 };
