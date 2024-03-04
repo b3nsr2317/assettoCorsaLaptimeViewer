@@ -42,15 +42,18 @@ const updateTable = (json) => {
     const bestLap = session.bestLaps[0].lap;
     const sectors = laps[0].sectors.length - 1;
     const car = player.car.replace(/\_/g, " ");
+    const track = json.track.replace(/\_/g, " ");
     const name = player.name;
     const eventType = session.name;
     // get session details as h5 html
     const sessionDetails =
         "<h5>Player: " +
         name +
-        " - Car: " +
+        "</br>Car: " +
         car +
-        " - Event: " +
+        "</br>Track: " +
+        track +
+        "</br>Event Type: " +
         eventType +
         "</h5>";
     // display session details
