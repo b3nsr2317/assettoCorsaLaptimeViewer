@@ -2,7 +2,7 @@
 
 To use just download the files, open `index.html` in your browser, then upload a session file[^1].
 
-It may be worth ordering your files by date modified - descending so that your latest sessions appear at the top.
+It may be worth ordering your files by "name" or "date modified" - descending so that your latest sessions appear at the top.
 
 This works with single player games started from **Content Manager** as your player is always stored as the first.
 
