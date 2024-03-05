@@ -39,7 +39,10 @@ const updateTable = (json) => {
     const player = json.players[0];
     const session = json.sessions[0];
     const laps = session.laps;
-    const bestLap = session.bestLaps[0].lap;
+    let bestLap = -1;
+    if (laps > 0) {
+        bestLap = session.bestLaps[0].lap;
+    }
     const sectors = laps[0].sectors.length - 1;
     const car = player.car.replace(/\_/g, " ");
     const track = json.track.replace(/\_/g, " ");
