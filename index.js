@@ -40,7 +40,7 @@ const updateTable = (json) => {
     const session = json.sessions[0];
     const laps = session.laps;
     let bestLap = -1;
-    if (laps > 0) {
+    if (laps.length > 0) {
         bestLap = session.bestLaps[0].lap;
     }
     const sectors = laps[0].sectors.length - 1;
