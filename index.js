@@ -70,25 +70,29 @@ const updateTable = (json) => {
     titleRow += "<th>Cuts</th></tr>";
     table.innerHTML += titleRow;
     for (let i = 0; i < laps.length; i++) {
-        const lap = laps[i];
-        let row = "<tr class='";
-        // check for invalid lap and best lap
-        if (lap.time < 0) {
-            row += "invalid ";
+        if (laps[i].car == 0) {
+            const lap = laps[i];
+            let row = "<tr class='";
+            // check for invalid lap and best lap
+            if (lap.time < 0) {
+                row += "invalid ";
+            }
+            if (i == bestLap) {
+                row += "best ";
+            }
+            row += "'><td>" + (i + 1) + "</td>";
+            let totalTime = 0;
+            for (let j = 0; j <= sectors; j++) {
+                totalTime += lap.sectors[j];
+            }
+            row += "<td>" + msToMins(totalTime) + "</td>";
+            for (let j = 0; j <= sectors; j++) {
+                row += "<td>" + msToMins(lap.sectors[j]) + "</td>";
+            }
+            row += "<td>" + lap.cuts + "</td>";
+            table.innerHTML += row;
+        } else {
+            break;
         }
-        if (i == bestLap) {
-            row += "best ";
-        }
-        row += "'><td>" + (i + 1) + "</td>";
-        let totalTime = 0;
-        for (let j = 0; j <= sectors; j++) {
-            totalTime += lap.sectors[j];
-        }
-        row += "<td>" + msToMins(totalTime) + "</td>";
-        for (let j = 0; j <= sectors; j++) {
-            row += "<td>" + msToMins(lap.sectors[j]) + "</td>";
-        }
-        row += "<td>" + lap.cuts + "</td>";
-        table.innerHTML += row;
     }
 };
