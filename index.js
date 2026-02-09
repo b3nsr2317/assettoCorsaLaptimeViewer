@@ -44,6 +44,23 @@ const updateTable = (json) => {
         bestLap = session.bestLaps[0].lap;
     }
     const sectors = laps[0].sectors.length - 1;
+    let bestSectors;
+    let firstLegalLap = true;
+    for (let i = 1; i < laps.length; i++) {
+        if (laps[i].cuts > 0) {
+            continue;
+        }
+        if (firstLegalLap) {
+            bestSectors = new Array(sectors + 1).fill(i);
+            firstLegalLap = false;
+        }
+        for (let j = 0; j <= sectors; j++) {
+            if (laps[i].sectors[j] < laps[bestSectors[j]].sectors[j]) {
+                bestSectors[j] = i;
+            }
+        }
+    }
+    console.log(bestSectors);
     const car = player.car.replace(/\_/g, " ");
     const track = json.track.replace(/\_/g, " ");
     const name = player.name;
@@ -77,17 +94,27 @@ const updateTable = (json) => {
             if (lap.time < 0) {
                 row += "invalid ";
             }
-            if (i == bestLap) {
-                row += "best ";
-            }
-            row += "'><td>" + (i + 1) + "</td>";
+            row += "'>";
             let totalTime = 0;
             for (let j = 0; j <= sectors; j++) {
                 totalTime += lap.sectors[j];
             }
-            row += "<td>" + msToMins(totalTime) + "</td>";
+            if (i == bestLap) {
+                row += "<td class='best'>" + (i + 1) + "</td>";
+                row += "<td class='best'>" + msToMins(totalTime) + "</td>";
+            } else {
+                row += "<td>" + (i + 1) + "</td>";
+                row += "<td>" + msToMins(totalTime) + "</td>";
+            }
             for (let j = 0; j <= sectors; j++) {
-                row += "<td>" + msToMins(lap.sectors[j]) + "</td>";
+                if (bestSectors[j] == i) {
+                    row +=
+                        "<td class='best'>" +
+                        msToMins(lap.sectors[j]) +
+                        "</td>";
+                } else {
+                    row += "<td>" + msToMins(lap.sectors[j]) + "</td>";
+                }
             }
             row += "<td>" + lap.cuts + "</td>";
             table.innerHTML += row;
