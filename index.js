@@ -60,7 +60,6 @@ const updateTable = (json) => {
             }
         }
     }
-    console.log(bestSectors);
     const car = player.car.replace(/\_/g, " ");
     const track = json.track.replace(/\_/g, " ");
     const name = player.name;
